@@ -1,0 +1,11 @@
+<p>Send a name</p>
+<input type="text" #simpleInput>
+<button (click)="createPerson(simpleInput)">Create person</button>
+
+<button (click)="getPeople()">Get people</button>
+
+<div class="container">
+  <div *ngFor="let person of people | keyvalue">
+    <p>{{person | json}}</p>
+  </div>
+</div>
